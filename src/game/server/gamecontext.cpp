@@ -18,7 +18,8 @@ enum
 {
 	RESET,
 	NO_RESET
-
+};
+		
 void CGameContext::Construct(int Resetting)
 {
 	m_Resetting = 0;
