@@ -1710,13 +1710,13 @@ void CGameContext::changeAnimal(int animal, int ClientID) {
 	char aAnimal[256];
 	char aAnimalAbility[256];
 	if(animal == 0) {
-		str_format(aAnimal, sizeof(aAnimal), "Spider");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "You can Build walls with your hammer.");
+		str_format(aAnimal, sizeof(aAnimal), "蜘蛛");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "你可以使用锤子造墙");
 	} else if(animal == 1) {
-		str_format(aAnimal, sizeof(aAnimal), "Parasite");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "You regenerate your Life if you hook other players");
+		str_format(aAnimal, sizeof(aAnimal), "寄生虫");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "你在钩住其他玩家的时候回血");
 	} else if(animal == 2) {
-		str_format(aAnimal, sizeof(aAnimal), "Bull");
+		str_format(aAnimal, sizeof(aAnimal), "公牛");
 		str_format(aAnimalAbility, sizeof(aAnimalAbility), "You are very strong, but you have a low range");
 	} else if(animal == 3) {
 		str_format(aAnimal, sizeof(aAnimal), "Snake");
@@ -1743,7 +1743,7 @@ void CGameContext::changeAnimal(int animal, int ClientID) {
 	m_apPlayers[ClientID]->m_Animal = animal;
 	m_apPlayers[ClientID]->GetCharacter()->Die(ClientID, WEAPON_WORLD);	
 	char aBuf[256];
-	str_format(aBuf, sizeof(aBuf), "You've changed you Animal to %s", aAnimal);
+	str_format(aBuf, sizeof(aBuf), "角色切换为 %s", aAnimal);
 	SendChatTarget(ClientID, aBuf);	
 	SendChatTarget(ClientID, aAnimalAbility);	
 	return;				
