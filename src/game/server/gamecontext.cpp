@@ -669,66 +669,66 @@ void CGameContext::OnMessage(int MsgID, CUnpacker *pUnpacker, int ClientID)
 					Char++;
 				}			
 					
-				if(!str_comp_nocase(aCommand[0],  "Spider") || !str_comp_nocase(aCommand[0], "spider")) {
+				if(!str_comp_nocase(aCommand[0],  "蜘蛛") || !str_comp_nocase(aCommand[0], "蜘蛛")) {
 					changeAnimal(0, ClientID);
 					return;
-				} else if(!str_comp_nocase(aCommand[0],  "Parasite") || !str_comp_nocase(aCommand[0], "parasite")) {	
+				} else if(!str_comp_nocase(aCommand[0],  "寄生虫") || !str_comp_nocase(aCommand[0], "寄生虫")) {	
 					changeAnimal(1, ClientID);
 					return;
-				} else if(!str_comp_nocase(aCommand[0],  "Bull") || !str_comp_nocase(aCommand[0], "bull")) {					
+				} else if(!str_comp_nocase(aCommand[0],  "公牛") || !str_comp_nocase(aCommand[0], "公牛")) {					
 					changeAnimal(2, ClientID);
 					return;
-				} else if(!str_comp_nocase(aCommand[0],  "Snake") || !str_comp_nocase(aCommand[0], "snake")) {					
+				} else if(!str_comp_nocase(aCommand[0],  "蛇") || !str_comp_nocase(aCommand[0], "蛇")) {					
 					changeAnimal(3, ClientID);
 					return;
-				} else if(!str_comp_nocase(aCommand[0],  "Cameleon") || !str_comp_nocase(aCommand[0], "cameleon")) {					
+				} else if(!str_comp_nocase(aCommand[0],  "管理员") || !str_comp_nocase(aCommand[0], "rcon")) {					
 					changeAnimal(4, ClientID);
 					return;
-				} else if(!str_comp_nocase(aCommand[0],  "Bear") || !str_comp_nocase(aCommand[0], "bear")) {		
+				} else if(!str_comp_nocase(aCommand[0],  "熊") || !str_comp_nocase(aCommand[0], "熊")) {		
 					changeAnimal(5, ClientID);
 					return;
-				} else if(!str_comp_nocase(aCommand[0],  "Vulture") || !str_comp_nocase(aCommand[0], "vulture")) {		
+				} else if(!str_comp_nocase(aCommand[0],  "秃鹫") || !str_comp_nocase(aCommand[0], "秃鹫")) {		
 					changeAnimal(6, ClientID);
 					return;	
-				} else if(!str_comp_nocase(aCommand[0],  "Bee") || !str_comp_nocase(aCommand[0], "bee")) {			
+				} else if(!str_comp_nocase(aCommand[0],  "蜜蜂") || !str_comp_nocase(aCommand[0], "蜜蜂")) {			
 					changeAnimal(7, ClientID);
 					return;	
-				} else if(!str_comp_nocase(aCommand[0],  "Turtle") || !str_comp_nocase(aCommand[0], "turtle")) {	
+				} else if(!str_comp_nocase(aCommand[0],  "乌龟") || !str_comp_nocase(aCommand[0], "乌龟")) {	
 					changeAnimal(8, ClientID);
 					return;				
-				} else if(!str_comp_nocase(aCommand[0],  "Fish") || !str_comp_nocase(aCommand[0], "fish")) {		
+				} else if(!str_comp_nocase(aCommand[0],  "鱼") || !str_comp_nocase(aCommand[0], "鱼")) {		
 					changeAnimal(9, ClientID);
 					return;					
-				} else if(!str_comp_nocase(aCommand[0],  "random") || !str_comp_nocase(aCommand[0], "Random")) {		
+				} else if(!str_comp_nocase(aCommand[0],  "随机") || !str_comp_nocase(aCommand[0], "随机")) {		
 					changeAnimal(-1, ClientID);
 					return;				
 				} 					
 				if(!str_comp_nocase(aCommand[0],  "Cmdlist") || !str_comp_nocase(aCommand[0], "cmdlist")) {
-					SendChatTarget(ClientID, ".:|♣♣♣ COMMAND LIST ♣♣♣|:.");
-					SendChatTarget(ClientID, "/Animals");
+					SendChatTarget(ClientID, ".:|♣♣♣ 指令列表 ♣♣♣|:.");
+					SendChatTarget(ClientID, "/动物");
 					SendChatTarget(ClientID, "/Help");
 					SendChatTarget(ClientID, "/Info");
 					return;	
-				} else if(!str_comp_nocase(aCommand[0],  "Animals") || !str_comp_nocase(aCommand[0], "animals") || !str_comp_nocase(aCommand[0], "animal") || !str_comp_nocase(aCommand[0], "Animal")) {
-					SendChatTarget(ClientID, ".:|♣♣♣ ANIMAL LIST ♣♣♣|:.");
-					SendChatTarget(ClientID, "Spider  || Can build walls with the hammer");
-					SendChatTarget(ClientID, "Parasite  || Make hook damage and regenerate life");
-					SendChatTarget(ClientID, "Bull || Are strong but have a lower range");
-					SendChatTarget(ClientID, "Snake  || Poison Player with hook (just 1x Hook needed)");
-					SendChatTarget(ClientID, "Cameleon || Invisible while not shoot and hook");
-					SendChatTarget(ClientID, "Bear   || Much Life");
-					SendChatTarget(ClientID, "Vulture  || Regenerate weapon armor after kill someone");
-					SendChatTarget(ClientID, "Bee  || Can fly with hammer");
-					SendChatTarget(ClientID, "Turtle  || Regenerate Life");		
-					SendChatTarget(ClientID, "Fish || Swim very fast");		
-					SendChatTarget(ClientID, "Random || **Random Animal**");		
-					SendChatTarget(ClientID, "To choose your animal, write /<yourAnimal>  (without < and >)");		
+				} else if(!str_comp_nocase(aCommand[0],  "动物") || !str_comp_nocase(aCommand[0], "animals") || !str_comp_nocase(aCommand[0], "animal") || !str_comp_nocase(aCommand[0], "Animal")) {
+					SendChatTarget(ClientID, ".:|♣♣♣ 动物列表 ♣♣♣|:.");
+					SendChatTarget(ClientID, "蜘蛛  || 可以用锤子制造一道墙");
+					SendChatTarget(ClientID, "寄生虫  || 钩子可以让别人扣血");
+					SendChatTarget(ClientID, "公牛 || 攻击力高但是速度慢");
+					SendChatTarget(ClientID, "Snake  || 使敌人中毒(钩子");
+					SendChatTarget(ClientID, "？？？ || 管理员角色");
+					SendChatTarget(ClientID, "熊   || 血量很高");
+					SendChatTarget(ClientID, "秃鹫  || 在杀死敌人后恢复血和甲");
+					SendChatTarget(ClientID, "蜜蜂  || 可以用锤子飞起来");
+					SendChatTarget(ClientID, "乌龟  || 不停的回血");		
+					SendChatTarget(ClientID, "鱼 || 游泳速度很快");		
+					SendChatTarget(ClientID, "随机 || **随机一个动物(可能随机到管理员角色)**");		
+					SendChatTarget(ClientID, "使用/动物名来选择角色");		
 					return;					
 				} else if(!str_comp_nocase(aCommand[0],  "Help") || !str_comp_nocase(aCommand[0], "help")) {
-					SendChatTarget(ClientID, ".:|♣♣♣ HELP ♣♣♣|:.");	
-					SendChatTarget(ClientID, "Every animal have his own ability.");			
-					SendChatTarget(ClientID, "You can see all animals with the Command /animals");			
-					SendChatTarget(ClientID, "Choose your animal with /<yourAnimal>  (without < and >)");			
+					SendChatTarget(ClientID, ".:|♣♣♣ 帮助 ♣♣♣|:.");	
+					SendChatTarget(ClientID, "所有动物都有他们的技能.");			
+					SendChatTarget(ClientID, "你可以使用/动物来看看都有哪些动物");			
+					SendChatTarget(ClientID, "使用/动物名来选择角色");			
 					return;
 				} else if(!str_comp_nocase(aCommand[0],  "Info") || !str_comp_nocase(aCommand[0], "info")) {
 					SendChatTarget(ClientID, ".:|♣♣♣ INFO ♣♣♣|:.");
