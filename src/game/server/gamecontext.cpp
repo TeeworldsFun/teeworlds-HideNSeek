@@ -18,7 +18,6 @@ enum
 {
 	RESET,
 	NO_RESET
-};
 
 void CGameContext::Construct(int Resetting)
 {
@@ -706,8 +705,8 @@ void CGameContext::OnMessage(int MsgID, CUnpacker *pUnpacker, int ClientID)
 				if(!str_comp_nocase(aCommand[0],  "Cmdlist") || !str_comp_nocase(aCommand[0], "cmdlist")) {
 					SendChatTarget(ClientID, ".:|♣♣♣ 指令列表 ♣♣♣|:.");
 					SendChatTarget(ClientID, "/动物");
-					SendChatTarget(ClientID, "/Help");
-					SendChatTarget(ClientID, "/Info");
+					SendChatTarget(ClientID, "/帮助");
+					SendChatTarget(ClientID, "/关于");
 					return;	
 				} else if(!str_comp_nocase(aCommand[0],  "动物") || !str_comp_nocase(aCommand[0], "animals") || !str_comp_nocase(aCommand[0], "animal") || !str_comp_nocase(aCommand[0], "Animal")) {
 					SendChatTarget(ClientID, ".:|♣♣♣ 动物列表 ♣♣♣|:.");
@@ -724,16 +723,16 @@ void CGameContext::OnMessage(int MsgID, CUnpacker *pUnpacker, int ClientID)
 					SendChatTarget(ClientID, "随机 || **随机一个动物(可能随机到管理员角色)**");		
 					SendChatTarget(ClientID, "使用/动物名来选择角色");		
 					return;					
-				} else if(!str_comp_nocase(aCommand[0],  "Help") || !str_comp_nocase(aCommand[0], "help")) {
+				} else if(!str_comp_nocase(aCommand[0],  "帮助") || !str_comp_nocase(aCommand[0], "help")) {
 					SendChatTarget(ClientID, ".:|♣♣♣ 帮助 ♣♣♣|:.");	
 					SendChatTarget(ClientID, "所有动物都有他们的技能.");			
 					SendChatTarget(ClientID, "你可以使用/动物来看看都有哪些动物");			
 					SendChatTarget(ClientID, "使用/动物名来选择角色");			
 					return;
-				} else if(!str_comp_nocase(aCommand[0],  "Info") || !str_comp_nocase(aCommand[0], "info")) {
-					SendChatTarget(ClientID, ".:|♣♣♣ INFO ♣♣♣|:.");
-					SendChatTarget(ClientID, "Unofficial Animal Mod Remake by KingteE :] [GER] Version 1.1.3 Original Mod by Blue-Ray");
-					SendChatTarget(ClientID, "If there are any Problems you can contract me at Skype: kingtee.ger ");
+				} else if(!str_comp_nocase(aCommand[0],  "关于") || !str_comp_nocase(aCommand[0], "info")) {
+					SendChatTarget(ClientID, ".:|♣♣♣ 关于 ♣♣♣|:.");
+					SendChatTarget(ClientID, "非官方的模组重做by KingteE :] [德国] 版本1.1.3 by Blue-Ray][中国]翻译by FFS&高PING战士");
+					SendChatTarget(ClientID, "如果你发现了什么问题请加QQ1421709710 ");
 					return;
 				}			
 				else
@@ -1701,7 +1700,7 @@ bool CGameContext::IsClientPlayer(int ClientID)
 
 void CGameContext::changeAnimal(int animal, int ClientID) {
 	if(m_apPlayers[ClientID]->m_AnimalChangeable == false) {
-		SendChatTarget(ClientID, "You are not able to change your animal");
+		SendChatTarget(ClientID, "你不能修改你的角色");
 		return;
 	}	
 	if(animal == -1) {
@@ -1726,19 +1725,19 @@ void CGameContext::changeAnimal(int animal, int ClientID) {
 		str_format(aAnimalAbility, sizeof(aAnimalAbility), "当你不用钩子，不射击，不与其他玩家碰撞时，你是隐形的");
 	} else if(animal == 5) {
 		str_format(aAnimal, sizeof(aAnimal), "熊");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "血量很高");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "你的血和甲都很高");
 	} else if(animal == 6) {
 		str_format(aAnimal, sizeof(aAnimal), "秃鹫");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "在杀死敌人后恢复血和甲");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "你在杀死敌人后恢复血和甲");
 	} else if(animal == 7) {
 		str_format(aAnimal, sizeof(aAnimal), "蜜蜂");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "可以用锤子飞起来");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "你可以用锤子飞起来");
 	} else if(animal == 8) {
 		str_format(aAnimal, sizeof(aAnimal), "乌龟");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "不停的回血");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "你会不停的回血");
 	} else if(animal == 9) {
 		str_format(aAnimal, sizeof(aAnimal), "鱼");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "游泳速度很快");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "你的游泳速度很快");
 	}
 	m_apPlayers[ClientID]->m_Animal = animal;
 	m_apPlayers[ClientID]->GetCharacter()->Die(ClientID, WEAPON_WORLD);	
