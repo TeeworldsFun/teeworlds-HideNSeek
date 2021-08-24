@@ -444,27 +444,27 @@ void IGameController::Tick()
 			if(GameServer()->m_apPlayers[i]->GetTeam() == TEAM_SPECTATORS)
 				GameServer()->m_apPlayers[i]->m_AnimalChangeable = false;
 			if(GameServer()->m_apPlayers[i]->m_Animal == -1) 
-				str_format(aBuf, sizeof(aBuf), "Not choosen");
+				str_format(aBuf, sizeof(aBuf), "没选择");
 			else if(GameServer()->m_apPlayers[i]->m_Animal == 0) 
-				str_format(aBuf, sizeof(aBuf), "Spider");				
+				str_format(aBuf, sizeof(aBuf), "蜘蛛");				
 			else if(GameServer()->m_apPlayers[i]->m_Animal == 1) 
-				str_format(aBuf, sizeof(aBuf), "Parasite");			
+				str_format(aBuf, sizeof(aBuf), "寄生虫");			
 			else if(GameServer()->m_apPlayers[i]->m_Animal == 2) 
-				str_format(aBuf, sizeof(aBuf), "Bull");		
+				str_format(aBuf, sizeof(aBuf), "公牛");		
 			else if(GameServer()->m_apPlayers[i]->m_Animal == 3) 
-				str_format(aBuf, sizeof(aBuf), "Snake");			
+				str_format(aBuf, sizeof(aBuf), "蛇");			
 			else if(GameServer()->m_apPlayers[i]->m_Animal == 4) 
-				str_format(aBuf, sizeof(aBuf), "Cameleon");		
+				str_format(aBuf, sizeof(aBuf), "躲藏者");		
 			else if(GameServer()->m_apPlayers[i]->m_Animal == 5) 
-				str_format(aBuf, sizeof(aBuf), "Bear");		
+				str_format(aBuf, sizeof(aBuf), "熊");		
 			else if(GameServer()->m_apPlayers[i]->m_Animal == 6) 
-				str_format(aBuf, sizeof(aBuf), "Vulture");		
+				str_format(aBuf, sizeof(aBuf), "秃鹫");		
 			else if(GameServer()->m_apPlayers[i]->m_Animal == 7) 
-				str_format(aBuf, sizeof(aBuf), "Bee");		
+				str_format(aBuf, sizeof(aBuf), "蜜蜂");		
 			else if(GameServer()->m_apPlayers[i]->m_Animal == 8) 
-				str_format(aBuf, sizeof(aBuf), "Turtle");	
+				str_format(aBuf, sizeof(aBuf), "乌龟");	
 			else if(GameServer()->m_apPlayers[i]->m_Animal == 9) 
-				str_format(aBuf, sizeof(aBuf), "Fish");					
+				str_format(aBuf, sizeof(aBuf), "鱼");					
 
 			Server()->SetClientClan(i, aBuf);
 		}
