@@ -714,7 +714,7 @@ void CGameContext::OnMessage(int MsgID, CUnpacker *pUnpacker, int ClientID)
 					SendChatTarget(ClientID, "蜘蛛  || 可以用锤子制造一道墙");
 					SendChatTarget(ClientID, "寄生虫  || 钩子可以让别人扣血");
 					SendChatTarget(ClientID, "公牛 || 攻击力高但是速度慢");
-					SendChatTarget(ClientID, "Snake  || 使敌人中毒(钩子");
+					SendChatTarget(ClientID, "蛇  || 使敌人中毒(钩子");
 					SendChatTarget(ClientID, "？？？ || 管理员角色");
 					SendChatTarget(ClientID, "熊   || 血量很高");
 					SendChatTarget(ClientID, "秃鹫  || 在杀死敌人后恢复血和甲");
@@ -1717,28 +1717,28 @@ void CGameContext::changeAnimal(int animal, int ClientID) {
 		str_format(aAnimalAbility, sizeof(aAnimalAbility), "你在钩住其他玩家的时候回血");
 	} else if(animal == 2) {
 		str_format(aAnimal, sizeof(aAnimal), "公牛");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "You are very strong, but you have a low range");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "攻击力高但是速度慢");
 	} else if(animal == 3) {
-		str_format(aAnimal, sizeof(aAnimal), "Snake");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "You can poison with your hook");
+		str_format(aAnimal, sizeof(aAnimal), "蛇");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "你可以用你的钩子让其他玩家中毒");
 	} else if(animal == 4) {
-		str_format(aAnimal, sizeof(aAnimal), "Carmeleon");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "You are invisible while you not hook, not shoot and not collide with other players");
+		str_format(aAnimal, sizeof(aAnimal), "变色龙");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "当你不用钩子，不射击，不与其他玩家碰撞时，你是隐形的");
 	} else if(animal == 5) {
-		str_format(aAnimal, sizeof(aAnimal), "Bear");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "You have 20 Hearts and 20 Armor");
+		str_format(aAnimal, sizeof(aAnimal), "熊");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "血量很高");
 	} else if(animal == 6) {
-		str_format(aAnimal, sizeof(aAnimal), "Vulture");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "You earn Weapon full ammo for all weapons if you kill other players.");
+		str_format(aAnimal, sizeof(aAnimal), "秃鹫");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "在杀死敌人后恢复血和甲");
 	} else if(animal == 7) {
-		str_format(aAnimal, sizeof(aAnimal), "Bee");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "You can fly with your hammer");
+		str_format(aAnimal, sizeof(aAnimal), "蜜蜂");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "可以用锤子飞起来");
 	} else if(animal == 8) {
-		str_format(aAnimal, sizeof(aAnimal), "Turtle");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "You regenerate Life.");
+		str_format(aAnimal, sizeof(aAnimal), "乌龟");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "不停的回血");
 	} else if(animal == 9) {
-		str_format(aAnimal, sizeof(aAnimal), "Fish");
-		str_format(aAnimalAbility, sizeof(aAnimalAbility), "You can swim very fast.");
+		str_format(aAnimal, sizeof(aAnimal), "鱼");
+		str_format(aAnimalAbility, sizeof(aAnimalAbility), "游泳速度很快");
 	}
 	m_apPlayers[ClientID]->m_Animal = animal;
 	m_apPlayers[ClientID]->GetCharacter()->Die(ClientID, WEAPON_WORLD);	
