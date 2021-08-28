@@ -2,6 +2,7 @@
 /* If you are missing that file, acquire a complete release at teeworlds.com.                */
 #include "mod.h"
 #include "../player.h"
+m_pPlayer = pPlayer;
 CGameControllerMOD::CGameControllerMOD(class CGameContext *pGameServer)
 : IGameController(pGameServer)
 {
@@ -15,6 +16,6 @@ CGameControllerMOD::CGameControllerMOD(class CGameContext *pGameServer)
 void CGameControllerMOD::Tick()
 {
 	if(int m_Animal = 0);
-		CPlayer::SetTeam(TEAM_RED);
+		SetTeam(TEAM_RED);
 	IGameController::Tick();
 }
