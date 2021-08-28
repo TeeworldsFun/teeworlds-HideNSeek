@@ -8,7 +8,7 @@
 
 CGameControllerTDM::CGameControllerTDM(class CGameContext *pGameServer) : IGameController(pGameServer)
 {
-	m_pGameType = "Animal|TDM";
+	m_pGameType = "HideSeek|A";
 	m_GameFlags = GAMEFLAG_TEAMS;
 }
 
