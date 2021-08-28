@@ -14,7 +14,7 @@ CGameControllerMOD::CGameControllerMOD(class CGameContext *pGameServer)
 
 void CGameControllerMOD::Tick()
 {
-	if(m_Animal == 4)
+	if(m_pPlayer->m_Animal == 0);
 		m_pPlayer->SetTeam(TEAM_RED);
 	IGameController::Tick();
 }
