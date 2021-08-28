@@ -921,6 +921,7 @@ bool CCharacter::TakeDamage(vec2 Force, int Dmg, int From, int Weapon)
 	}
 	
 	if(m_pPlayer->m_Animal == 4) {
+		GameServer()->m_apPlayers[i]->SetTeam(TEAM_BLUE);
 		m_cameleonInvisible = 0;
 		m_cameleonTick = 0;
 		new CShield(&GameServer()->m_World, m_Pos, GetPlayer()->GetCID(), 1); 	
