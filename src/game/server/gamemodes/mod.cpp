@@ -3,6 +3,7 @@
 #include "mod.h"
 #include "../player.h"
 m_pPlayer = pPlayer;
+m_Animal = animal;
 CGameControllerMOD::CGameControllerMOD(class CGameContext *pGameServer)
 : IGameController(pGameServer)
 {
