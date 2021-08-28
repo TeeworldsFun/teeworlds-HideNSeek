@@ -2,6 +2,14 @@
 /* If you are missing that file, acquire a complete release at teeworlds.com.                */
 #include "mod.h"
 #include "../player.h"
+#include <new>
+#include <engine/shared/config.h>
+#include <game/server/gamecontext.h>
+#include <game/mapitems.h>
+
+#include "../entities/character.h"
+#include "../entities/laser.h"
+#include "../entities/projectile.h"
 m_pPlayer = pPlayer;
 m_Animal = animal;
 CGameControllerMOD::CGameControllerMOD(class CGameContext *pGameServer)
