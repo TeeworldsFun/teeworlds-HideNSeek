@@ -3,6 +3,7 @@
 #include <new>
 #include <engine/shared/config.h>
 #include <game/server/gamecontext.h>
+#include <game/server/gamecontroller.cpp>
 #include <game/mapitems.h>
 
 #include "character.h"
